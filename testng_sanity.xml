@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="Com.MyStore.Utilities.ListenerClass"></listener>
+	</listeners>
+	<test thread-count="5" name="Sanity">
+		<parameter name="Browser" value="Chrome"></parameter>
+		<groups>
+			<run>
+				<include name="Sanity"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="Com.MyStore.TestCases.HomePageTest" />
+			<class name="Com.MyStore.TestCases.OrderPageTest" />
+			<class name="Com.MyStore.TestCases.SearchResultPageTest" />
+			<class name="Com.MyStore.TestCases.LoginPageTest" />
+			<class name="Com.MyStore.TestCases.AddToCartPageTest" />
+			<class name="Com.MyStore.TestCases.AccountCreationPageTest" />
+			<class name="Com.MyStore.TestCases.IndexPageTest" />
+			<class name="Com.MyStore.TestCases.EndToEndTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
